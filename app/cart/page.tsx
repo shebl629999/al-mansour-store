@@ -315,7 +315,7 @@ export default function CartPage() {
                   // ✅ FIXED LINE: Added (item as any) to bypass TypeScript error
                   const itemStock = (item as any).stock !== undefined ? Number((item as any).stock) : 50;
                   
-                  const isMaxedOut = item.quantity >= itemStock;
+                  const isMaxedOut = (item.quantity ?? 1) >= itemStock;
 
                   return (
                     <div 
