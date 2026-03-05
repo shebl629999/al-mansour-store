@@ -327,7 +327,7 @@ export default function CartPage() {
                         <div>
                           <h4 className="font-bold text-gray-700 text-sm line-clamp-2 leading-relaxed">{item.name}</h4>
                           {/* ✅ Fixed class name to actually look like text, not "..." */}
-                          {item.model && <p className="text-sm text-gray-500 mt-1">{item.model}</p>}
+                          {(item as any).model && <p className="text-gray-500 text-sm">{(item as any).model}</p>}
                         </div>
                         
                         <div className="flex justify-between items-end mt-2">
