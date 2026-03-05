@@ -16,7 +16,7 @@ const GOVERNORATES = [
 ];
 
 export default function CheckoutPage() {
-  const { cart, total, clearCart } = useCart();
+  const { cart, total, clearCart } = useCart() as any;
   const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
