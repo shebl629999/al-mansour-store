@@ -257,7 +257,7 @@ export default function CheckoutPage() {
               </h2>
 
               <div className="space-y-4 max-h-[300px] overflow-y-auto custom-scrollbar pr-2">
-                {cart.map((item) => (
+                {cart.map((item: any) => (
                   <div key={item.id} className="flex gap-3 items-center border-b border-gray-50 pb-3 last:border-0">
                     <div className="w-16 h-16 bg-gray-50 rounded-lg flex items-center justify-center p-1 border">
                         <img src={item.image} alt={item.name} className="max-w-full max-h-full object-contain" />
