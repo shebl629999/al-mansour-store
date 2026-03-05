@@ -311,11 +311,13 @@ export default function CartPage() {
 
               <div className="space-y-4 max-h-[400px] overflow-y-auto custom-scrollbar pr-1">
                 {cart.map((item, index) => {
-                  const itemStock = item.stock !== undefined ? Number(item.stock) : 50;
+                  
+                  // ✅ FIXED LINE: Added (item as any) to bypass TypeScript error
+                  const itemStock = (item as any).stock !== undefined ? Number((item as any).stock) : 50;
+                  
                   const isMaxedOut = item.quantity >= itemStock;
 
                   return (
-                    // ✅ FIXED KEY: Using index ensures uniqueness even if duplicates exist
                     <div 
                       key={`${item.id}-${index}`} 
                       className="flex gap-4 border border-gray-50 p-3 rounded-xl hover:border-sky-100 transition relative group"
