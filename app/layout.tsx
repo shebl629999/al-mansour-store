@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "المنصور للأجهزة الكهربائية والمنزلية",
     description: "اكتشف أفضل عروض الأجهزة الكهربائية والمنزلية من معرض المنصور. جودة وضمان وأفضل الأسعار.",
-    url: "https://mansourf.com", // تأكد إن ده الدومين بتاعك اللي شغال
+    url: "https://mansorf.com", // تأكد إن ده الدومين بتاعك اللي شغال
     siteName: "المنصور للأجهزة - Al Mansour",
     images: [
       {
